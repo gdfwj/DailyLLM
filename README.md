@@ -1,6 +1,8 @@
 # Daily LLM
 
-This repository contains the code of the paper [DailyLLM: Context-Aware Activity Log Generation Using Multi-Modal Sensors and LLMs](https://arxiv.org/pdf/2507.13737). This paper proposes a lightweight LLM-based framework that integrates structured prompting with efficient feature extraction to enable high-level activity understanding. Extensive experiments demonstrate that outperforms state-of-the-art (SOTA) log generation methods and can be efficiently deployed on personal computers and Raspberry Pi. Utilizing only a 1.5B-parameter LLM model, achieves a 17% improvement in log generation BERTScore precision compared to the 70B-parameter SOTA baseline, while delivering nearly 10$\times$ faster inference speed.
+This repository contains the code of the paper [DailyLLM: Context-Aware Activity Log Generation Using Multi-Modal Sensors and LLMs](https://arxiv.org/pdf/2507.13737). This paper proposes a lightweight LLM-based framework that integrates structured prompting with efficient feature extraction to enable high-level activity understanding. Extensive experiments demonstrate that outperforms state-of-the-art (SOTA) log generation methods and can be efficiently deployed on personal computers and Raspberry Pi. Utilizing only a 1.5B-parameter LLM model, achieves a 17% improvement in log generation BERTScore precision compared to the 70B-parameter SOTA baseline, while delivering nearly 10 times faster inference speed.
+
+The training and testing dataset is also available on Hugging Face: https://huggingface.co/datasets/YeTianCS/DailyLLMDataset
 
 ## Deployment and finetuning deepseek-R1 model
 
@@ -118,7 +120,7 @@ After running `inference_on_pi.py`, you could get the evaluation results.
 
 ## Data preparation
 
-We have uploaded the finalized test dataset on Hugging Face, and you can directly access it by: https://huggingface.co/datasets/YeTianCS/DailyLLMDataset
+We have uploaded the finalized dataset on Hugging Face, and you can directly access it by: https://huggingface.co/datasets/YeTianCS/DailyLLMDataset
 
 Alternatively, you can build the dataset from the original databases by following the steps in this section: 
 
