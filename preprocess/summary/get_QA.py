@@ -5,9 +5,6 @@ import re
 from tqdm import tqdm
 
 def create_message(system_content, user_content, label_message):
-    """
-    创建完整的消息结构
-    """
     return [
         {"role": "system", "content": system_content},
         {"role": "user", "content": user_content},
@@ -16,15 +13,10 @@ def create_message(system_content, user_content, label_message):
 
 
 def analyze_and_generate_responses(input_file, reference_file, output_file):
-    """
-    分析输入文件中的数据，生成相应的输出，并保存为 output_file。
-    """
 
-    # 读取参考数据（显式指定编码）
     with open(reference_file, 'r', encoding='utf-8') as ref_file:
         reference_data = [json.loads(line) for line in ref_file.readlines()]
 
-    # 读取输入数据
     with open(input_file, 'r', encoding='utf-8') as f:
         input_data = [json.loads(line) for line in f.readlines()]
 
@@ -64,10 +56,9 @@ Output Format: Please organize your answer in this format:\nDate-time: XXX; Loca
         total_acc = [f"{x:.4f}" for x in imu_data[52:]]
 
         audio_features = [f"{x:.4f}" for x in entry["Scene"]["audio_features"]]
-        activity_type = entry["activity"]["activity_label"] # 默认占位预测
+        activity_type = entry["activity"]["activity_label"]
         scene_info = entry["Scene"]["scene_label"]
 
-        # 构建用户内容
         user_content = (
             f"Here are some features we extracted from sensors on Smartphone:\n"
             f"1. Date-time: {date_time}\n"
@@ -79,7 +70,6 @@ Output Format: Please organize your answer in this format:\nDate-time: XXX; Loca
             f"Please analyze these features and output your answer according to the format."
         )
 
-        # 构建标签（地址信息匹配）
         specific_addresses = []
         detail_info = []
         location_types = []
@@ -136,15 +126,14 @@ Output Format: Please organize your answer in this format:\nDate-time: XXX; Loca
         message = create_message(system_content, user_content, label_message)
         messages.append(message)
 
-    # 保存输出消息（如需要写入）
     with open(output_file, 'w', encoding='utf-8') as out_f:
         for msg in messages:
             json.dump(msg, out_f, ensure_ascii=False)
             out_f.write('\n')
 
 # 示例调用
-input_file = 'dataset_fine\\Updated_DailyLLM_processed_data.jsonl'  # 输入数据文件路径
-reference_file = 'updated_processed_location_data.jsonl'  # 参考数据文件路径
-output_file = 'final_dataset1.jsonl'  # 输出文件路径
+input_file = 'dataset_fine\\Updated_DailyLLM_processed_data.jsonl'
+reference_file = 'updated_processed_location_data.jsonl' 
+output_file = 'final_dataset1.jsonl' 
 
 analyze_and_generate_responses(input_file, reference_file, output_file)
