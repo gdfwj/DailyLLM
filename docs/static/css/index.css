@@ -122,6 +122,13 @@ body {
     line-height: 1.1 !important;
 }
 
+/* 只让标题容器更宽，不改全站容器 */
+.title-wide{
+  max-width: 3000px;    /* 或 1280/1400，自己调 */
+  margin: 0 auto;
+}
+
+
 .publication-banner {
   max-height: 70vh;
   border-radius: var(--border-radius-lg);
