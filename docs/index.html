@@ -4,136 +4,46 @@
   <meta charset="utf-8" />
   <title>DailyLLM — Paper · Dataset · Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- 子路径基准（非常重要）：部署在 https://<user>.github.io/dailyLLM/ 时保证资源路径正确 -->
+
+  <!-- 修正为与你仓库名大小写一致 -->
   <base href="/DailyLLM/">
 
-  <!-- Social preview / SEO -->
-  <meta name="description" content="DailyLLM: project page with paper, dataset, and code." />
-  <meta property="og:title" content="DailyLLM" />
-  <meta property="og:description" content="DailyLLM: project page with paper, dataset, and code." />
-  <meta property="og:type" content="website" />
-  <!-- og:image 建议使用绝对 URL；发布后可改为你的最终地址 -->
-  <meta property="og:image" content="https://gdfwj.github.io/dailyLLM/assets/teaser.png" />
+  <!-- 在线样式库（即刻美化） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
+  <!-- 你的少量自定义样式（可选） -->
   <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- 分享图建议用绝对 URL -->
+  <meta property="og:title" content="DailyLLM" />
+  <meta property="og:description" content="A lightweight framework for daily language model evaluation." />
+  <meta property="og:image" content="https://gdfwj.github.io/DailyLLM/assets/teaser.png" />
   <link rel="icon" href="assets/teaser.png" />
 </head>
+
 <body>
-  <header class="nav">
-    <div class="container">
-      <a href="./" class="brand">DailyLLM</a>
-      <nav>
-        <a href="#paper">Paper</a>
-        <a href="#dataset">Dataset</a>
-        <a href="#code">Code</a>
-        <a href="#cite">Cite</a>
-      </nav>
-    </div>
-  </header>
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>DailyLLM</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#paper">Paper</a></li>
+      <li><a href="#dataset">Dataset</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#cite">Cite</a></li>
+    </ul>
+  </nav>
 
-  <main id="top">
-    <section class="hero container">
-      <div class="hero-text">
-        <h1>DailyLLM</h1>
-        <p class="subtitle">
-          A concise one-liner about your project (e.g., “A lightweight framework for daily language model evaluation”). 
-        </p>
-        <div class="cta">
-          <a class="btn primary" target="_blank" href="https://arxiv.org/abs/2507.13737">📄 Paper</a>
-          <a class="btn" target="_blank" href="https://huggingface.co/datasets/YeTianCS/DailyLLMDataset">🗂 Dataset</a>
-          <a class="btn" target="_blank" href="https://github.com/gdfwj/DailyLLM">💻 Code</a>
-        </div>
-      </div>
-      <div class="hero-media">
-        <!-- 占位图：把 assets/teaser.png 换成你的展示图（同名替换即可） -->
-        <img src="assets/teaser.png" alt="DailyLLM teaser image" />
-      </div>
-    </section>
-
-    <section class="container two-col" id="paper">
-      <div>
-        <h2>Paper</h2>
-        <p><strong>Title:</strong> DailyLLM (replace with actual title)</p>
-        <p><strong>Authors:</strong> &lt;Your Name&gt; et al.</p>
-        <p><strong>Venue/Year:</strong> (e.g., arXiv 2025 / Conference)</p>
-        <p>
-          <a class="btn" target="_blank" href="https://arxiv.org/abs/2507.13737">arXiv</a>
-          <!-- 若有PDF直链、poster/slides可在 assets/ 中加文件并放按钮 -->
-        </p>
-      </div>
-      <div>
-        <h3>Abstract</h3>
-        <p>
-          Put a short abstract here (5–7 sentences). Alternatively, a TL;DR list can go here.
-        </p>
-      </div>
-    </section>
-
-    <section class="container two-col" id="dataset">
-      <div>
-        <h2>Dataset</h2>
-        <p>
-          Brief description of the dataset: size, format, license, splits, etc.
-        </p>
-        <p>
-          <a class="btn" target="_blank" href="https://huggingface.co/datasets/YeTianCS/DailyLLMDataset">Hugging Face Dataset</a>
-        </p>
-      </div>
-      <div>
-        <h3>Data Card</h3>
-        <ul class="card">
-          <li><b>Samples:</b> –</li>
-          <li><b>Format:</b> –</li>
-          <li><b>License:</b> –</li>
-          <li><b>Checksum:</b> –</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="container two-col" id="code">
-      <div>
-        <h2>Code</h2>
-        <p>Implementation, training & evaluation scripts, quickstart:</p>
-        <pre class="code">git clone https://github.com/gdfwj/DailyLLM
-cd DailyLLM
-# pip/conda install ...
-python run_demo.py --help</pre>
-        <p>
-          <a class="btn" target="_blank" href="https://github.com/gdfwj/DailyLLM">GitHub</a>
-          <a class="btn" target="_blank" href="https://github.com/gdfwj/DailyLLM/releases">Releases</a>
-        </p>
-      </div>
-      <div>
-        <h3>Reproducibility</h3>
-        <ul class="card">
-          <li><b>Env:</b> conda.yml / Dockerfile</li>
-          <li><b>Seeds:</b> fixed</li>
-          <li><b>Weights:</b> v1.0</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="container" id="cite">
-      <h2>Citation</h2>
-      <pre class="code">@article{dailyllm2025,
-  title   = {DailyLLM},
-  author  = {Your Name and Others},
-  journal = {arXiv preprint arXiv:2507.13737},
-  year    = {2025},
-  url     = {https://<your-username>.github.io/dailyLLM/}
-}</pre>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div>© 2025 &lt;DailyLLM&gt;. Hosted on GitHub Pages.</div>
+  <main class="container">
+    <div>© 2025 &lt;DailyLLM&gt;. Hosted on GitHub Pages.</div>
       <div class="links">
         <a target="_blank" href="https://github.com/gdfwj/DailyLLM">Code</a>
         <a target="_blank" href="https://huggingface.co/datasets/YeTianCS/DailyLLMDataset">Dataset</a>
         <a target="_blank" href="https://arxiv.org/abs/2507.13737">Paper</a>
-      </div>
-    </div>
+  </main>
+
+  <footer class="container">
+    <small>© 2025 DailyLLM. Hosted on GitHub Pages.</small>
   </footer>
 </body>
 </html>
