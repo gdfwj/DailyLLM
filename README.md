@@ -162,7 +162,7 @@ We tested IMU baselines with both original data and data with extracted features
 
 `baselines/baseline_feature.py` will test both ML and DL baseline using features. 
 
-Also, baseline of audios is at `baselines/baseline_audio.py`, original audio data is at [here](https://ucsdcloud-my.sharepoint.com/:f:/r/personal/yet002_ucsd_edu/Documents/SensorLLM_dataset/audio_tut2016?csf=1&web=1&e=Sf8iZZ)
+Also, baseline of audios is at `baselines/baseline_audio.py`. 
 
 The code will report accuracy, precision, recall and F1 in results_accuracy.csv and write confusion matrix to results_summary.txt
 
