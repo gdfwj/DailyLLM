@@ -120,7 +120,6 @@ body {
 
 /* 桌面端让标题一行更宽：隐藏你写的 <br>，并做更优雅分行 */
 @media (min-width: 1024px){
-  .publication-title br{ display:none; }
   .publication-title{ text-wrap: balance; }
 }
 
