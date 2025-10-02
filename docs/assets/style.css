@@ -1,3 +1,108 @@
-/* docs/assets/style.css */
-.hero-media img{ width:100%; border-radius:12px }
-pre.code{ white-space:pre-wrap }
+/* 全局与容器 */
+:root{
+  --bg:#0b0c10;        /* 页面背景 */
+  --panel:#ffffff;     /* 中心内容白底 */
+  --text:#1a1a1a;      /* 正文颜色 */
+  --muted:#566070;     /* 次要文字 */
+  --brand:#2c6fa3;     /* 按钮主色 */
+  --brand-dark:#235b86;/* 按钮悬停 */
+  --line:#e6e8ee;      /* 细边线 */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text)}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:40px 20px 60px;
+  background:var(--panel);
+}
+
+/* 顶部渐变横幅，居中大标题 */
+.hero{
+  background:linear-gradient(160deg,#0f2027 0%,#203a43 50%,#2c5364 100%);
+  color:#eef5ff;
+  padding:70px 16px 60px;
+  text-align:center;
+  position:relative;
+}
+.hero::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-28px; height:28px;
+  background:linear-gradient(to bottom, rgba(44,83,100,1), rgba(255,255,255,0));
+  opacity:.25;
+  pointer-events:none;
+}
+.hero-inner{max-width:1200px;margin:0 auto}
+.title{
+  font-weight:500;
+  letter-spacing:.02em;
+  line-height:1.35;
+  font-size:40px;
+  margin:0;
+}
+
+/* 作者与单位 */
+.meta{ text-align:center; margin-top:40px; }
+.meta p{ margin:0 0 14px 0; }
+.authors{ font-size:18px; }
+.aff{ color:var(--muted); }
+
+/* 三个按钮区域 */
+.cta{
+  text-align:center;
+  margin:22px 0 32px;
+}
+.btn{
+  display:inline-block;
+  background:var(--brand);
+  color:#fff;
+  text-decoration:none;
+  padding:10px 20px;
+  border-radius:8px;
+  margin:0 8px 10px;
+  box-shadow:0 2px 0 rgba(0,0,0,.08);
+  transition:background .2s ease, transform .02s ease;
+  font-weight:600;
+}
+.btn:hover{ background:var(--brand-dark) }
+.btn:active{ transform:translateY(1px) }
+
+/* 演示图 */
+.demo{
+  display:flex;
+  justify-content:center;
+  margin-top:10px;
+}
+.demo img{
+  width:100%;
+  max-width:1000px;
+  border:1px solid var(--line);
+  border-radius:10px;
+}
+
+/* Citation 区域 */
+.cite{ max-width:1000px; margin:36px auto 0; }
+.code{
+  background:#0f1220;
+  color:#eaf0ff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px;
+  overflow:auto;
+}
+
+/* 页脚 */
+.foot{
+  text-align:center;
+  color:#cfd6df;
+  font-size:14px;
+  padding:18px 10px 26px;
+  background:transparent;
+}
+
+@media (max-width:900px){
+  .title{ font-size:30px }
+  .authors{ font-size:16px }
+}

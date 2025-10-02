@@ -2,48 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>DailyLLM — Paper · Dataset · Code</title>
+  <title>DailyLLM — Context-Aware Activity Log Generation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 修正为与你仓库名大小写一致 -->
+  <!-- 与线上路径大小写一致： https://<user>.github.io/DailyLLM/ -->
   <base href="/DailyLLM/">
 
-  <!-- 在线样式库（即刻美化） -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-
-  <!-- 你的少量自定义样式（可选） -->
-  <link rel="stylesheet" href="assets/style.css" />
-
-  <!-- 分享图建议用绝对 URL -->
+  <meta name="description" content="DailyLLM: Context-Aware Activity Log Generation Using Multi-Modal Sensors and LLMs" />
   <meta property="og:title" content="DailyLLM" />
-  <meta property="og:description" content="A lightweight framework for daily language model evaluation." />
-  <meta property="og:image" content="https://gdfwj.github.io/DailyLLM/assets/teaser.png" />
-  <link rel="icon" href="assets/teaser.png" />
-</head>
+  <meta property="og:description" content="Context-Aware Activity Log Generation Using Multi-Modal Sensors and LLMs" />
+  <meta property="og:image" content="https://gdfwj.github.io/DailyLLM/assets/tensor.png" />
 
+  <link rel="icon" href="assets/tensor.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>DailyLLM</strong></li>
-    </ul>
-    <ul>
-      <li><a href="#paper">Paper</a></li>
-      <li><a href="#dataset">Dataset</a></li>
-      <li><a href="#code">Code</a></li>
-      <li><a href="#cite">Cite</a></li>
-    </ul>
-  </nav>
+
+  <!-- 顶部横幅 + 大标题 -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="title">
+        DailyLLM: Context-Aware Activity Log Generation<br/>
+        Using Multi-Modal Sensors and LLMs
+      </h1>
+    </div>
+  </header>
 
   <main class="container">
-    <div>© 2025 &lt;DailyLLM&gt;. Hosted on GitHub Pages.</div>
-      <div class="links">
-        <a target="_blank" href="https://github.com/gdfwj/DailyLLM">Code</a>
-        <a target="_blank" href="https://huggingface.co/datasets/YeTianCS/DailyLLMDataset">Dataset</a>
-        <a target="_blank" href="https://arxiv.org/abs/2507.13737">Paper</a>
+    <!-- Authors & (可改) Affiliation -->
+    <section class="meta">
+      <p class="authors">
+        Authors: <strong>Ye Tian</strong>, <strong>Xiaoyuan Ren</strong>, <strong>Zihao Wang</strong>, 
+        <strong>Onat Gungor</strong>, <strong>Xiaofan Yu</strong>, <strong>Tajana Rosing</strong>
+      </p>
+      <p class="aff">
+        Affiliation: University of California San Diego (UC San Diego)
+      </p>
+    </section>
+
+    <!-- 三个按钮：Paper / Dataset / Code -->
+    <section class="cta">
+      <a class="btn" target="_blank" href="https://arxiv.org/abs/2507.13737">Paper Link</a>
+      <a class="btn" target="_blank" href="https://huggingface.co/datasets/YeTianCS/DailyLLMDataset">Dataset</a>
+      <a class="btn" target="_blank" href="https://github.com/gdfwj/DailyLLM">Code</a>
+    </section>
+
+    <!-- 底部演示图片（把 assets/demo.png 换成你的图片即可） -->
+    <section class="demo">
+      <img src="assets/tensor.png" alt="DailyLLM structure image"/>
+    </section>
+
+    <!-- Citation（按你提供的 BibTeX 原样放置） -->
+    <section class="cite">
+      <h2>Citation</h2>
+      <pre class="code">@article{tian2025dailyllm,
+  title={DailyLLM: Context-Aware Activity Log Generation Using Multi-Modal Sensors and LLMs},
+  author={Tian, Ye and Ren, Xiaoyuan and Wang, Zihao and Gungor, Onat and Yu, Xiaofan and Rosing, Tajana},
+  journal={arXiv preprint arXiv:2507.13737},
+  year={2025}
+}</pre>
+    </section>
   </main>
 
-  <footer class="container">
-    <small>© 2025 DailyLLM. Hosted on GitHub Pages.</small>
+  <footer class="foot">
+    © 2025 DailyLLM.
   </footer>
 </body>
 </html>
