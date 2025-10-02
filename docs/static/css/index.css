@@ -418,7 +418,7 @@ code {
   content: "ied!";
 }
 
-.container.is-max-desktop{ max-width: 1200px; }
+.container.is-max-desktop{ max-width: 3000px; }
 
 /* Scroll to Top Button */
 .scroll-to-top {
