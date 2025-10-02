@@ -758,3 +758,16 @@ a:focus {
     box-shadow: none !important;
   }
 }
+/* 只缩小首屏预览图 */
+.demo-wrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.demo-wrap img{
+  max-width: 720px;   /* 想更小就改成 640/560 等 */
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
