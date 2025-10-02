@@ -166,12 +166,15 @@ Also, baseline of audios is at `baselines/baseline_audio.py`, original audio dat
 
 The code will report accuracy, precision, recall and F1 in results_accuracy.csv and write confusion matrix to results_summary.txt
 
-## Cross-dataset testing
+## Citation
 
-We tested if model trained on UCI dataset could be generalized to other datasets. 
+If you use this repository or find our paper/code/dataset helpful, please cite:
 
-Firstly, we remove unseen labels that not appear in UCI dataset and align the labels (such as converting walking_upstairs, upstairs, climbing to UPSTARTS) by running `preprocess/imu/generate_other_by_uci_label.py`. 
-
-Then, `baselines/baseline_cross.py` tested the performance of both ML and DL.
-
-Finally, to test the cross-dataset performance of LLM, you also have to modify the name of label in jsonl of UCI datset.
+```bibtex
+@article{tian2025dailyllm,
+  title={DailyLLM: Context-Aware Activity Log Generation Using Multi-Modal Sensors and LLMs},
+  author={Tian, Ye and Ren, Xiaoyuan and Wang, Zihao and Gungor, Onat and Yu, Xiaofan and Rosing, Tajana},
+  journal={arXiv preprint arXiv:2507.13737},
+  year={2025}
+}
+```
